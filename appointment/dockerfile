@@ -1,0 +1,7 @@
+FROM node:12.7-alpine AS build
+WORKDIR /usr/src/soa-appointments
+COPY package.json  ./
+RUN npm install
+COPY . .
+EXPOSE 3001
+CMD node index.js

@@ -1,0 +1,20 @@
+.container {
+    width:100%;
+    height: 100%;
+    padding:0;
+    // display: flex;
+}
+
+.calendar {
+    padding:10px;
+    width:80%;
+    height:100vh;
+    float:right;
+}
+
+.status {
+    padding:0;
+    width:20%;
+    height:100%;
+    float:left;
+}

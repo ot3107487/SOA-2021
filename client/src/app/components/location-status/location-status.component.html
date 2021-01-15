@@ -1,0 +1,21 @@
+<div class="container" [ngStyle]="classApp">
+    <div class="practitioner">
+        <img [src]="userPhotoUrl">
+        {{practitioner.display}}
+        
+    </div>
+    <hr>
+    <br>
+    <label>{{status}}</label>
+    <hr>
+    <br>
+    <p>{{description}}</p>
+    <br>
+    <label *ngIf="appointment">Time elapsed from {{appDuration}} minutes:</label>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <p-knob *ngIf="appointment" size=250 textColor="white" valueColor="rgb(0, 51, 153)" rangeColor="white" [max] ="appDuration" [(ngModel)]="timeleft" [readonly]="true"></p-knob>
+    </div>
+</div>

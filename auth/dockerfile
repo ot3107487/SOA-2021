@@ -1,0 +1,7 @@
+FROM node:12.7-alpine AS build
+WORKDIR /usr/src/soa-auth
+COPY package.json  ./
+RUN npm install
+EXPOSE 3002
+COPY . .
+CMD node index.js

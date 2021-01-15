@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="calendar">
+        <full-calendar #calendar [options]="options"></full-calendar>
+    </div>
+    <div class="status">
+        <app-location-status [userPhotoUrl]="userPhotoUrl" [practitioner]="practitioner" [appointment]="appointment"></app-location-status>
+    </div>
+</div>
+
+<app-add-appointment *ngIf="showAddAppointment" [patients]="patients" [practitioner]="practitioner" (add)="add($event)" (close)="showAddAppointment=false"></app-add-appointment>

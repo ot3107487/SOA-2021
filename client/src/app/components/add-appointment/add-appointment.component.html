@@ -1,0 +1,21 @@
+<p-dialog header="Add appointment" [closeOnEscape]="false" [closable]="false" [draggable]="false" [modal]="true" [visible]="true" [style]="{width: '40vw'}" [baseZIndex]="1">
+    
+    <label>Practitioner: {{practitioner.display}}</label><br><br>
+    
+    <label>Patient</label><br>
+    <p-dropdown appendTo="body" [options]="patientsSelect" [(ngModel)]="selectedPatient" placeholder=""></p-dropdown>
+    <br><br>
+    
+    <label for="start">Start</label><br>
+    <p-calendar appendTo="body" [(ngModel)]="start" [showTime]="true" inputId="start"></p-calendar>
+    <br><br>
+    
+    <label for="end">End</label><br>
+    <p-calendar appendTo="body" [(ngModel)]="end" [showTime]="true" inputId="start"></p-calendar>
+
+    <p-footer>
+        <p-button icon="pi pi-times" label="Cancel" (click)="cancel()" styleClass="p-button-text p-button-warning"></p-button>
+        <p-button icon="pi pi-check" label="Save" (click)="save()" styleClass="p-button-text"></p-button>
+    
+    </p-footer>
+</p-dialog>
